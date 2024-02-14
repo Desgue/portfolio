@@ -1,21 +1,18 @@
 
+import ContactForm from "@/components/ContactForm"
 import Projects from "./Projects"
 
 const Contacts = () => {
   return (
     <>
-    <main className='min-h-screen mt-24'>
-      <div className='min-h-full  flex flex-col items-center text-center container mx-auto'>
-        <h1 className='text-4xl font-bold text-black'> Contact Me </h1>
-        <h2 className='text-md font-semibold pt-4'> Contact me on the following links </h2>
-        
+    <main className='min-h-screen h-screen pt-12'>
+      <div className='min-h-full min-w-full  grid grid-cols-3 '>
+        <div className="flex flex-col col-start-2 col-end-3  text-center items-center my-16 shadow-lg min-w-[420px]">
+          <h1 className='text-4xl font-bold text-[#6E07F3] py-12'> Say Hello! </h1>
+            <ContactForm />
+        </div>
       </div>
-      <div className='mx-auto container  w-[90%] md:w-[80%] grid grid-cols-12 gap-8 mt-12'>
-          <div className='col-span-8 text-left border min-h-[360px]'> Some card </div>
-          <div className='col-span-4 border min-h-[360px]'> Some Text </div>
-          <div className='col-span-4 text-left border min-h-[360px]'> Some text </div>
-          <div className='col-span-8 border min-h-[360px]'> Some Card </div>
-      </div>
+
     </main>
     <Projects />
     </>
