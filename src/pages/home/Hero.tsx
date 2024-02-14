@@ -10,11 +10,11 @@ const Hero = () => {
       <main className='flex flex-col items-center min-w-screen min-h-screen h-screen'>
         <section className='flex flex-col container mx-auto items-center pt-40 text-center'>
           <Header/>
-          <p className='text-base lg:text-lg font-medium pt-20'> I'm work mostly with Go, DynamoDB,  React , TypeScript, JavaScript and Postgress.</p>
+          <p className='text-base lg:text-lg font-medium pt-8 '> I'm work mostly with Go, DynamoDB,  React , TypeScript, JavaScript and Postgress.</p>
           <p className='text-base lg:text-lg font-medium pt-2'>Always keen to learn new technologies, especially if backend or cloud related. Soon AWS certificated.</p>
         </section>
-        <section className="pt-24">
-          <Button className="border-orange-400 text-orange-500 hover:bg-white hover:border-orange-600 hover:text-orange-600 " variant="outline" >See my work</Button>
+        <section className="pt-20">
+          <Button className="border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline" >See my work</Button>
         </section>
           <Separator className="mt-12  w-[90%] bg-neutral-300"/>
 
@@ -79,7 +79,7 @@ const Header = () => {
   const [role, setRole] = React.useState("a Software Developer")
   const [idx, setIdx] = React.useState(0)
   React.useEffect(() => {
-    let time = (role === "Hey, I'm Eduardo Guedes ; )") ? 4500 : 2500
+    let time = (role === "Hey, I'm Eduardo Guedes ; )") ? 3500 : 2000
     const interval = setInterval(() => {
       setIdx((idx) => {
         return (idx < roles.length- 1) ? idx + 1 :  0
