@@ -8,17 +8,17 @@ const Hero = () => {
   return (
     <>
       <main className='flex flex-col items-center min-w-screen min-h-screen h-screen'>
-        <section className='flex flex-col container mx-auto items-center pt-40 text-center'>
+        <section className='flex flex-col container mx-auto items-center pt-24 lg:pt-40 text-center'>
           <Header/>
-          <p className='text-base lg:text-lg font-medium pt-8 '> I'm work mostly with Go, DynamoDB,  React , TypeScript, JavaScript and Postgress.</p>
-          <p className='text-base lg:text-lg font-medium pt-2'>Always keen to learn new technologies, especially if backend or cloud related. Soon AWS certificated.</p>
+          <p className='text-sm sm:text-base lg:text-lg font-medium pt-8 '> I'm work mostly with Go, DynamoDB,  React , TypeScript, JavaScript and Postgress.</p>
+          <p className='text-sm sm:text-base lg:text-lg font-medium pt-2'>Always keen to learn new technologies, especially if backend or cloud related. Soon AWS certificated.</p>
         </section>
-        <section className="pt-20">
+        <section className="pt-12 sm:pt-20">
           <Button className="border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline" >See my work</Button>
         </section>
-          <Separator className="mt-12  w-[90%] bg-neutral-300"/>
+          <Separator className="mt-24 sm:mt-12  w-[90%] bg-neutral-300"/>
 
-          <section className="container mx-auto pt-32 flex flex-row justify-between gap-0.5">
+          <section className="container mx-auto mt-40 sm:pt-32 flex flex-row justify-between gap-0.5">
             <Link to="https://github.com/desgue">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ const Header = () => {
   , [role, idx])
   
   return (
-    <h1 className='text-3xl lg:text-6xl font-bold text '>{`${role}`} </h1>
+    <h1 className='text-2xl sm:text-3xl lg:text-6xl font-bold text pb-12'>{`${role}`} </h1>
   )
 }
 
