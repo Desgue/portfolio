@@ -76,7 +76,7 @@ const Hero = () => {
 
 const Header = () => {
   const roles = ["Hey, I'm Eduardo Guedes ; )", "I'm a Software Developer" , "I'm a Hackerman 🕶️", "I'm Learning Game Dev"]
-  const [role, setRole] = React.useState("Hey, I'm Eduardo Guedes ;")
+  const [role, setRole] = React.useState("Hey, I'm Eduardo Guedes ; )")
   const [idx, setIdx] = React.useState(1)
   React.useEffect(() => {
     let time = (role === "Hey, I'm Eduardo Guedes ; )") ? 3500 : 2000
