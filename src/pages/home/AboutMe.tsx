@@ -11,16 +11,16 @@ const AboutMe = () => {
       </section>
       <div className='bg-white flex flex-col lg:flex-row text-center gap-12 min-h-full lg:min-h-[80%] w-[90%] md:w-[80%] border rounded-xl shadow-md container mt-[-180px] '>
           <div className="container border-b lg:border-b-0 lg:border-r min-h-[460px] pt-24">
-            <h1 className='text-2xl font-bold text-black'> About Me </h1>
+            <h1 className='text-2xl font-bold text-black'> Past Experience </h1>
             <h2 className='text-md font-semibold pt-4'> I'm a software developer based in Brazil. I have a passion for software development and I'm always looking for new challenges. I'm a quick learner and I'm always looking for new technologies to learn. </h2>
           </div>
           <div className="container border-b lg:border-b-0 lg:border-r min-h-[460px] pt-24">
             <h1 className='text-2xl font-bold text-black'> About Me </h1>
-            <h2 className='text-md font-semibold pt-4'> I'm a software developer based in Brazil. I have a passion for software development and I'm always looking for new challenges. I'm a quick learner and I'm always looking for new technologies to learn. </h2>
+            <h2 className='text-md font-semibold pt-4'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, exercitationem cumque placeat perferendis laboriosam beatae nemo labore doloremque. Modi minus vitae iste, quod laborum quo temporibus corrupti quidem vel eos? </h2>
           </div> 
           <div className="container min-h-[460px] pt-24">
-            <h1 className='text-2xl font-bold text-black '> About Me </h1>
-            <h2 className='text-md font-semibold pt-4'> I'm a software developer based in Brazil. I have a passion for software development and I'm always looking for new challenges. I'm a quick learner and I'm always looking for new technologies to learn. </h2>
+            <h1 className='text-2xl font-bold text-black '> What To Expect </h1>
+            <h2 className='text-md font-semibold pt-4'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab unde dolor illo voluptates, vero explicabo eos ea illum soluta ad quae fugiat vitae quo officia doloribus odio corporis omnis animi esse. Eaque fugit minima magni fugiat vitae aspernatur expedita quibusdam voluptates sequi maxime voluptatem vero, odit ratione error numquam temporibus. </h2>
           </div>
         </div>
         <Contacts />
