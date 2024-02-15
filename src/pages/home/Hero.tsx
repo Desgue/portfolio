@@ -94,7 +94,7 @@ const Header = () => {
   , [role, idx])
   
   return (
-    <h1 className='text-3xl lg:text-6xl font-bold text pb-12 text-[#6E07F3]'>{`${role}`} </h1>
+    <h1 className='text-2xl sm:text-4xl lg:text-6xl font-bold text pb-12 text-[#6E07F3]'>{`${role}`} </h1>
   )
 }
 
