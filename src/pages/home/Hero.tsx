@@ -30,7 +30,7 @@ const Hero = () => {
             <button className="p-[3px] relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
                   <div className="px-8 py-2  bg-white rounded-[6px]  relative group transition duration-200 text-[#6E07F3]  font-semibold text-sm lg:text-xl hover:text-white hover:bg-transparent">
-                    See my work
+                    Check my work
                   </div>
             </button>
           </div>
