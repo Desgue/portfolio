@@ -2,6 +2,16 @@ import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import tasker from '../../assets/projects.png'
 import shooter from '../../assets/wave-shooter.png'
+import { SiReact, SiVite, SiPostgresql, SiAwsamplify, SiPython } from "react-icons/si";
+import { IconContext } from "react-icons";
+import { FaGolang } from "react-icons/fa6";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+
 const Projects = () => {
 
   return (
@@ -22,7 +32,73 @@ const Projects = () => {
             <p className="text-md font-semibold pt-2 text-pretty">A project management app that helps you keep track of your projects and tasks.</p>
             
             <p className="text-base font-medium    pt-8 text-pretty  ">Use the visitor account with Username: Visitor and Password: Visitor123 if you want to access all functionality.</p>
-            <p className="text-base font-medium pt-2 text-pretty">This project was made using Vite + React, Aws Cognito, Go and PostgresSql.</p>
+            {/* <p className="text-base font-medium pt-2 text-pretty">This project was made using Vite + React, Aws Cognito, Go and PostgresSql.</p> */}
+            <div className='flex justify-center items-center gap-2 py-4'>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className='hover:cursor-default '>
+                    <IconContext.Provider value={{ color: "#6E07F3", size: "2em" }}>
+                      <FaGolang />
+                    </IconContext.Provider></TooltipTrigger>
+                  <TooltipContent>
+                    <p>Golang</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className='hover:cursor-default '>                
+                    <IconContext.Provider value={{ color: "#6E07F3", size: "2em" }}>
+                      <SiReact />
+                    </IconContext.Provider></TooltipTrigger>
+                  <TooltipContent>
+                    <p>ReactJs</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className='hover:cursor-default '>                
+                    <IconContext.Provider value={{ color: "#6E07F3", size: "2em" }}>
+                      <SiVite />
+                    </IconContext.Provider></TooltipTrigger>
+                  <TooltipContent>
+                    <p>Vite</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className='hover:cursor-default '>                
+                    <IconContext.Provider value={{ color: "#6E07F3", size: "2em" }}>
+                      <SiPostgresql />
+                    </IconContext.Provider></TooltipTrigger>
+                  <TooltipContent>
+                    <p>PostgresSQL</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className='hover:cursor-default '>
+                    <IconContext.Provider value={{ color: "#6E07F3", size: "2em" }}>
+                      <SiAwsamplify />
+                    </IconContext.Provider></TooltipTrigger>
+                  <TooltipContent>
+                    <p>Aws Amplify + Aws Cognito</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+                
+
+
+
+
+                
+            </div>
             <Link to="https://production.d3ozduy4s4mqlc.amplifyapp.com/" target="_blank" rel="noopener noreferrer">
               <Button className="mt-4 w-full border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Project</Button>
             </Link>
@@ -43,7 +119,22 @@ const Projects = () => {
             <p className="text-md font-semibold pt-2 text-pretty">A wave shooter style game in 2D</p>
             
             <p className="text-base font-medium pt-8 text-pretty ">This project is still under development and its still my second attempt in 2d game development in Python, I can say it have been a challange and a thrill to delve into the world of vector math and OOP.</p>
-            <p className="text-base font-medium pt-2 text-pretty">Made with Python and Pygame-Ce.</p>
+            {/* <p className="text-base font-medium pt-2 text-pretty">Made with Python and Pygame-Ce.</p> */}
+            <div className='flex justify-center items-center gap-2 py-4'>
+            <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className='hover:cursor-default '>
+                    <IconContext.Provider value={{ color: "#6E07F3", size: "2em" }}>
+                      <SiPython />
+                    </IconContext.Provider>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Pyhon + PygameCE</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+            </div>
             <Link to="/projects/shooter">
               <Button className="mt-4 w-full border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Project</Button>
             </Link>
@@ -58,3 +149,5 @@ const Projects = () => {
 }
 
 export default Projects
+
+
