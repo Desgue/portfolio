@@ -1,6 +1,4 @@
-import React from "react"
 import { TypewriterEffect } from "@/components/ui/typewritter-effect.tsx"
-import {Separator} from "../../components/ui/separator.tsx"
 import {Link} from "react-router-dom"
 
 const Hero = () => {

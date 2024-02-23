@@ -3,7 +3,6 @@ import {
   IconClipboardCopy,
   IconFileBroken,
   IconSignature,
-  IconTableColumn,
 } from "@tabler/icons-react";
 
 const Contacts = () => {
@@ -44,9 +43,9 @@ const Contacts = () => {
 export default Contacts
 
 
-const Skeleton = () => (
+/* const Skeleton = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
-);
+); */
 const About = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-lg font-medium text-md text-pretty ">
     I'm a software developer based in Brazil. I have a passion for software development and I'm always looking for new challenges. 
