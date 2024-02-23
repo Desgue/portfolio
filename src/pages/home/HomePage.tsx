@@ -1,6 +1,5 @@
 import Hero from './Hero'
-import AboutMe from './AboutMe'
-import Contacts from './Contacts'
+import About from './About'
 import Projects from './Projects'
 // The component is divided in Hero section, About me section, Projects section, Contact section and Footer section.
 // Each section can expand into a more detailed view when the user clicks on the section title.
@@ -14,8 +13,7 @@ const HomePage = () => {
   return (
     <>
       <Hero />
-      <AboutMe />
-      <Contacts />
+      <About />
       <Projects />
     </>
   )

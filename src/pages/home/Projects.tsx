@@ -7,8 +7,8 @@ const Projects = () => {
   return (
     <main className="min-h-screen ">
       <div className="min-h-[480px] flex flex-col items-center text-center mx-auto pt-24 bg-[#6E07F3]">
-        <h1 className="text-4xl font-bold text-white pt-12">My Personal Projects</h1>
-        <h2 className="text-md font-semibold pt-4 text-white">Here are pet projects I am currently working on.</h2>
+        <h1 className="text-4xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-200 pt-4">My Personal Projects</h1>
+        <h2 className="text-md lg:text-xl font-semibold pt-4 px-2 text-white">Some of the pet projects I am currently working on.</h2>
       </div>
       <div className="container border  rounded-xl  shadow-lg min-h-[640px] mx-auto w-[90%] md:w-[80%] flex flex-col lg:grid lg:grid-cols-12 gap-8 mt-[-180px] bg-white">
        
@@ -32,9 +32,9 @@ const Projects = () => {
           </div>
 
 
-          <div className='order-1 lg:order-2 lg:col-span-8 group relative items-center justify-center overflow-hidden cursor-pointer rounded-lg pt-4'> 
+          <div className=' order-1 lg:order-2 lg:col-span-8 group relative items-center justify-center overflow-hidden cursor-pointer rounded-lg pt-4'> 
             <Link to="/projects/shooter">
-            <img loading="lazy" className="h-full lg:h-[90%] pl-12 w-full lg:w-[90%] object-cover" src={shooter} alt="Tasker Landing Page" />
+            <img loading="lazy" className="h-full lg:h-[90%] lg:pl-12 w-full lg:w-[90%] object-cover" src={shooter} alt="Tasker Landing Page" />
             </Link>
           </div>
 

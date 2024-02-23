@@ -40,7 +40,7 @@ const Hero = () => {
             <Link to="https://github.com/desgue">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-14 w-14 lg:h-14 lg:w-14"
+                className="h-12 w-12 lg:h-14 lg:w-14"
                 fill="currentColor"
 
                 viewBox="0 0 24 24">
@@ -52,7 +52,7 @@ const Hero = () => {
             <Link to="https://www.linkedin.com/in/eduardo-gomero-96179215b/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-14 w-14 lg:h-14 lg:w-14 text-[#0077b5]"
+                className="h-12 w-12 lg:h-14 lg:w-14 text-[#0077b5]"
                 fill="currentColor"
                 viewBox="0 0 24 24">
                 <path
@@ -63,7 +63,7 @@ const Hero = () => {
             <Link to="mailto:guedesgomero@gmail.com">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-14 w-14   lg:h-16 lg:w-16 text-[#ea4335]"
+                className="h-12 w-12   lg:h-16 lg:w-16 text-[#ea4335]"
                 fill="currentColor"
                 viewBox="0 0 24 24">
                 <path
@@ -76,7 +76,7 @@ const Hero = () => {
             <button onClick={() => alert("Sorry I dont have Twitter, just needed to fill space for the layout :(")}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-14 w-14 lg:h-14 lg:w-14 text-[#1da1f2]"
+                className="h-12 w-12 lg:h-14 lg:w-14 text-[#1da1f2]"
                 fill="currentColor"
 
                 viewBox="0 0 24 24">
@@ -90,30 +90,6 @@ const Hero = () => {
     </>
   )
 }
-// Emoji to represent a developer 
 
-const Header = () => {
-  const roles = ["Hey, I'm Eduardo Guedes ; )", "I'm a Software Developer" , "I'm a Hackerman 🕶️", "I'm Learning Game Dev"]
-  const [role, setRole] = React.useState("Hey, I'm Eduardo Guedes ; )")
-  const [idx, setIdx] = React.useState(1)
-  React.useEffect(() => {
-    let time = (role === "Hey, I'm Eduardo Guedes ; )") ? 3500 : 2000
-    const interval = setInterval(() => {
-      setIdx((idx) => {
-        return (idx < roles.length- 1) ? idx + 1 :  0
-      }
-      )
-      setRole(() => {
-        return roles[idx]
-      })
-    }, time)
-    return () => clearInterval(interval)
-  }
-  , [role, idx])
-  
-  return (
-    <h1 className='text-2xl sm:text-4xl lg:text-6xl font-bold text pb-12 text-[#6E07F3]'>{`${role}`} </h1>
-  )
-}
 
 export default Hero
