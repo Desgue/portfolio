@@ -1,28 +1,46 @@
 import React from "react"
-
-import { Button } from "../../components/ui/button.tsx"
+import { TypewriterEffect } from "@/components/ui/typewritter-effect.tsx"
 import {Separator} from "../../components/ui/separator.tsx"
 import {Link} from "react-router-dom"
 
 const Hero = () => {
+  const words = [
+    {text: "Hello"},
+    {text: "I'm"},
+    {text: "Eduardo",
+    className: "text-[#6E07F3] font-bold"},
+    {text: "Guedes,",
+    className: "text-[#6E07F3] font-bold"},
+    {text: "a"},
+    {text: "Software"},
+    {text: "Developer"},
+    {text: "based"},
+    {text: "in"},
+    {text: "Portugal!"},
+
+
+  ]
   return (
     <>
       <main className='flex flex-col items-center min-w-screen min-h-screen h-screen'>
         <section className='flex flex-col container mx-auto items-center pt-24 lg:pt-40 text-center'>
-          <Header/>
-          <p className='text-sm sm:text-base lg:text-lg font-medium pt-8 '> I'm work mostly with Go, DynamoDB,  React , TypeScript, JavaScript and Postgress.</p>
-          <p className='text-sm sm:text-base lg:text-lg font-medium pt-2'>Always keen to learn new technologies, especially if backend or cloud related. Soon AWS certificated.</p>
+        <div className="flex flex-col items-center justify-center h-[40rem] ">
+        <TypewriterEffect words={words} />
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10">
+            <button className="p-[3px] relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                  <div className="px-8 py-2  bg-white rounded-[6px]  relative group transition duration-200 text-[#6E07F3]  font-semibold text-sm lg:text-xl hover:text-white hover:bg-transparent">
+                    See my work
+                  </div>
+            </button>
+          </div>
+        </div>
         </section>
-        <section className="pt-12 sm:pt-20">
-          <Button className="border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline" >See my work</Button>
-        </section>
-          <Separator className="mt-24 sm:mt-12  w-[90%] bg-neutral-300"/>
-
-          <section className="container mx-auto mt-40 sm:pt-32 flex flex-row justify-between gap-0.5">
+          <section className="container mx-auto flex flex-row justify-between gap-0.5">
             <Link to="https://github.com/desgue">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-14 w-14 lg:h-20 lg:w-20"
+                className="h-14 w-14 lg:h-14 lg:w-14"
                 fill="currentColor"
 
                 viewBox="0 0 24 24">
@@ -34,7 +52,7 @@ const Hero = () => {
             <Link to="https://www.linkedin.com/in/eduardo-gomero-96179215b/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-14 w-14 lg:h-20 lg:w-20 text-[#0077b5]"
+                className="h-14 w-14 lg:h-14 lg:w-14 text-[#0077b5]"
                 fill="currentColor"
                 viewBox="0 0 24 24">
                 <path
@@ -45,7 +63,7 @@ const Hero = () => {
             <Link to="mailto:guedesgomero@gmail.com">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-20 w-20   lg:h-24 lg:w-24 text-[#ea4335]"
+                className="h-14 w-14   lg:h-16 lg:w-16 text-[#ea4335]"
                 fill="currentColor"
                 viewBox="0 0 24 24">
                 <path
@@ -58,7 +76,7 @@ const Hero = () => {
             <button onClick={() => alert("Sorry I dont have Twitter, just needed to fill space for the layout :(")}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-14 w-14 lg:h-20 lg:w-20 text-[#1da1f2]"
+                className="h-14 w-14 lg:h-14 lg:w-14 text-[#1da1f2]"
                 fill="currentColor"
 
                 viewBox="0 0 24 24">
