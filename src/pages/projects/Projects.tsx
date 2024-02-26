@@ -219,7 +219,7 @@ const Items = [
     key: "portfolio",
     title: "Portfolio",
     subtitle: "My personal portfolio",
-    description: "My personal portfolio developed to showcase my work and learn about web development. The portfolio is developed in React, Tailwind and ShadcnUI. Hosted on Aws Amplify.",
+    description: "My personal portfolio developed to showcase my work and pratice frontend web development. The portfolio is developed in React, Tailwind and ShadcnUI. Hosted on Aws Amplify.",
     links: ["https://github.com/Desgue/portfolio"],
     icons: (<>
         <TooltipProvider>
