@@ -19,9 +19,9 @@ const Hero = () => {
 
   ]
   return (
-    <>
-      <main className='flex flex-col items-center min-w-screen min-h-screen h-screen'>
-        <section className='flex flex-col container mx-auto items-center lg:pt-40 text-center'>
+
+      <main className='flex flex-col items-center min-w-screen min-h-screen h-[100dvh]'>
+        <section className='flex flex-colcontainer mx-auto items-center lg:pt-12 text-center'>
           <div className="flex flex-col items-center justify-center h-[40rem] ">
             <TypewriterEffect words={words} />
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 pt-10">
@@ -34,7 +34,7 @@ const Hero = () => {
             </div>
           </div>
         </section>
-        <section className="container mx-auto flex flex-row justify-between gap-0.5 m-[-24px] sm:m-0">
+        <section className="container mx-auto flex flex-row justify-between gap-0.5 sm:mt-12 m-0">
           <Link to="https://github.com/desgue">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const Hero = () => {
 
           </section>
       </main>
-    </>
+
   )
 }
 
