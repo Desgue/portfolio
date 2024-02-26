@@ -41,7 +41,7 @@ const ContactForm = () => {
       })
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmitHandler)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmitHandler)} className="space-y-8 w-full">
         <FormField
           control={form.control}
           name="name"
@@ -85,7 +85,7 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button className="w-[420px] border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">Submit</Button>
+        <Button className="w-full border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">Submit</Button>
       </form>
     </Form>
   )

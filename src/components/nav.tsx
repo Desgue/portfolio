@@ -1,8 +1,7 @@
 import React from 'react'
 import { NavLink} from "react-router-dom"
 import { CgMenuGridO } from "react-icons/cg";
-import { FaHome, FaInfoCircle, FaProjectDiagram, FaClipboardList } from "react-icons/fa";
-import { IoMdContact } from "react-icons/io";
+import { FaHome,  FaProjectDiagram, FaClipboardList } from "react-icons/fa";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -23,7 +22,7 @@ export default Nav
 
 const LargeNav = () => {
   return (
-    <nav className='hidden lg:flex gap-8 justify-center h-20 w-1/2  mx-auto items-center border-neutral-200 border rounded-full shadow-sm bg-white'>
+    <nav className='hidden lg:flex gap-12 justify-center h-16 w-1/3  mx-auto items-center border-neutral-200 border rounded-full shadow-sm bg-white'>
     <NavLink
       to="/home"
       className={({ isActive, isPending }) =>
@@ -36,14 +35,6 @@ const LargeNav = () => {
       <FaHome/> Home
     </NavLink>  
 
-    <NavLink to="/about" className={({ isActive, isPending }) =>
-        [
-          isActive ? "!text-[#6E07F3] " : "",
-          isPending ? "text-black " : "",
-        ].join(" text-base font-semibold  hover:text-[#6E07F3] flex gap-2 items-center ", )
-      }>
-       <FaInfoCircle /> About Me
-    </NavLink>  
 
     <NavLink to="/projects" className={({ isActive, isPending }) =>
         [
@@ -63,14 +54,7 @@ const LargeNav = () => {
       <FaClipboardList /> Blog
     </NavLink>
 
-    <NavLink to="/contact" className={({ isActive, isPending }) =>
-        [
-          isActive ? "!text-[#6E07F3] " : "",
-          isPending ? "text-black " : "",
-        ].join(" text-base font-semibold  hover:text-[#6E07F3] flex gap-2 items-center ", )
-      }>
-        <IoMdContact /> Contact
-    </NavLink>  
+
 
   </nav>
   )
@@ -97,17 +81,6 @@ const SmallNav = () => {
               <FaHome/> Home
             </NavLink>   
           </DropdownMenuItem>
-
-          <DropdownMenuItem>
-            <NavLink to="/about" className={({ isActive, isPending }) =>
-                [
-                  isActive ? "!text-[#6E07F3] " : "",
-                  isPending ? "text-black " : "",
-                ].join(" text-base font-semibold  hover:text-[#6E07F3] flex gap-2 items-center ", )
-              }>
-               <FaInfoCircle /> About Me
-            </NavLink>  
-          </DropdownMenuItem>
           
           <DropdownMenuItem>
             <NavLink to="/projects" className={({ isActive, isPending }) =>
@@ -128,17 +101,6 @@ const SmallNav = () => {
                 ].join(" text-base font-semibold  hover:text-[#6E07F3] flex gap-2 items-center ", )
               }>
               <FaClipboardList /> Blog
-            </NavLink> 
-          </DropdownMenuItem>
-
-          <DropdownMenuItem>
-            <NavLink to="/contact" className={({ isActive, isPending }) =>
-                [
-                  isActive ? "!text-[#6E07F3] " : "",
-                  isPending ? "text-black " : "",
-                ].join(" text-base font-semibold  hover:text-[#6E07F3] flex gap-2 items-center ", )
-              }>
-                <IoMdContact /> Contact
             </NavLink> 
           </DropdownMenuItem>
         </DropdownMenuContent>

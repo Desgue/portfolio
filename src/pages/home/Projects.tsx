@@ -27,12 +27,26 @@ const Projects = () => {
             <img loading="lazy" className="h-full w-full object-cover" src={tasker} alt="Tasker Landing Page" />
             </Link>
           </div>
-          <div className='lg:col-span-4 min-h-[360px] flex flex-col item-center text-center pt-2 container'> 
-            <h1 className="text-xl font-bold"><span className='text-[#6E07F3] font-extrabold text-2xl'>Tasker</span><br/> Project Management App </h1>
-            <p className="text-md font-semibold pt-2 text-pretty">A project management app that helps you keep track of your projects and tasks.</p>
+          <div className='lg:col-span-4 min-h-[360px] flex flex-col item-center text-center pt-2 '> 
+            <h1 className="text-md font-bold"><span className='text-[#6E07F3] font-extrabold text-2xl'>Tasker</span><br/> Project Management App </h1>
+            <p className="text-base font-medium pt-2">
+              A project management app developed to apply and consolidate concepts I have been working with recently.
+            </p>
+            <p className="text-base font-medium pt-2">
+              With Auth handled by Amazon Cognito, front end in React, Tailwind, ShadcnUI and backend in Go and Postgress. 
+              Frontend deployed in Aws Amplify and backend in Railway.
+            </p>
             
-            <p className="text-base font-medium    pt-8 text-pretty  ">Use the visitor account with Username: Visitor and Password: Visitor123 if you want to access all functionality.</p>
-            {/* <p className="text-base font-medium pt-2 text-pretty">This project was made using Vite + React, Aws Cognito, Go and PostgresSql.</p> */}
+            <p className="text-base font-medium pt-4   ">
+              You can test the app using the following credentials:
+            </p>
+            <p className="text-base font-medium pt-2  ">
+              Username: Visitor 
+            </p>
+            <p className="text-md font-medium pt-2">
+              Password: Visitor123
+            </p>
+              
             <div className='flex justify-center items-center gap-2 py-4'>
               <TooltipProvider>
                 <Tooltip>
@@ -100,10 +114,10 @@ const Projects = () => {
                 
             </div>
             <Link to="https://production.d3ozduy4s4mqlc.amplifyapp.com/" target="_blank" rel="noopener noreferrer">
-              <Button className="mt-4 w-full border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Project</Button>
+              <Button className="mt-4 w-2/3 border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Project</Button>
             </Link>
             <Link to="https://github.com/Desgue/Tasker" target="_blank" rel="noopener noreferrer">
-              <Button className="mt-4 w-full border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Repository</Button>
+              <Button className="mt-4 w-2/3 border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Repository</Button>
             </Link>
           </div>
 
@@ -114,9 +128,9 @@ const Projects = () => {
             </Link>
           </div>
 
-          <div className='order-2 lg:order-1 lg:col-span-4 min-h-[360px] flex flex-col item-center text-center pt-2 pb-4 container'> 
+          <div className='order-2 lg:order-1 lg:col-span-4 min-h-[360px] flex flex-col item-center text-center pt-2 pb-4 '> 
             <h1 className="text-[#6E07F3] font-extrabold text-2xl"> Wave Shooter </h1>
-            <p className="text-md font-semibold pt-2 text-pretty">A wave shooter style game in 2D</p>
+            <p className="text-md font-bold pt-2 text-pretty">A wave shooter style game in 2D</p>
             
             <p className="text-base font-medium pt-8 text-pretty ">This project is still under development and its still my second attempt in 2d game development in Python, I can say it have been a challange and a thrill to delve into the world of vector math and OOP.</p>
             {/* <p className="text-base font-medium pt-2 text-pretty">Made with Python and Pygame-Ce.</p> */}
@@ -136,10 +150,10 @@ const Projects = () => {
 
             </div>
             <Link to="/projects/shooter">
-              <Button className="mt-4 w-full border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Project</Button>
+              <Button className="mt-4 w-2/3 border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Project</Button>
             </Link>
             <Link to="https://github.com/Desgue/wave-shooter" target="_blank" rel="noopener noreferrer">
-              <Button className="mt-4 w-full border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Repository</Button>
+              <Button className="mt-4 w-2/3 border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Repository</Button>
             </Link>
           </div>
           
