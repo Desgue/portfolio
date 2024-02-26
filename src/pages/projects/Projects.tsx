@@ -10,11 +10,11 @@ import { ReactNode } from "react"
 
 const Projects = () => {
   return (
-    <main className="bg-neutral-100">
+    <main className="bg-neutral-50">
     <Nav />
-    <section className="container max-w-6xl mt-12 ">
+    <section className="mx-4 md:mx-auto md:container max-w-6xl mt-12 ">
       <h1 className="text-5xl font-bold">Projects</h1>
-      <div className="flex flex-col lg:grid grid-cols-2 gap-12 mt-12">
+      <div className="flex flex-col lg:grid grid-cols-2 gap-6 md:gap-12 mt-12">
         {Items.map((item) => (
           <ProjectCard {...item }/>
         ))}
@@ -81,7 +81,7 @@ const ProjectCard = ({image, key, title, subtitle, description, links}: ProjectC
       <h1 className="text-4xl font-bold p-2">{title}</h1>
       <p className="text-lg font-medium p-2">{subtitle}</p>
       <p className="text-base font-normal p-2">{description}</p>
-      <div className="flex gap-4 p-2">
+      <div className="flex flex-col md:flex-row md:gap-4 p-2">
       <Link target="_blank" to={`/projects/${key}`}> 
         <Btn>
             Project Details
@@ -90,14 +90,14 @@ const ProjectCard = ({image, key, title, subtitle, description, links}: ProjectC
       {links.length > 1 
       ? (
         <>
-           <Link target="_blank" to={links[0]}> 
-              <Btn>
-                 View Repository
-              </Btn>
-            </Link>
             <Link target="_blank" to={links[1]}> 
               <Btn>
                  View Live Demo
+              </Btn>
+            </Link>
+           <Link target="_blank" to={links[0]}> 
+              <Btn>
+                 View Repository
               </Btn>
             </Link>
         </>
