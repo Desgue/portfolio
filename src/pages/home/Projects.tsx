@@ -114,7 +114,7 @@ const Projects = () => {
                 
             </div>
             <Link to="https://production.d3ozduy4s4mqlc.amplifyapp.com/" target="_blank" rel="noopener noreferrer">
-              <Button className="mt-4 w-2/3 border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Project</Button>
+              <Button className="mt-4 w-2/3 border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Demo</Button>
             </Link>
             <Link to="https://github.com/Desgue/Tasker" target="_blank" rel="noopener noreferrer">
               <Button className="mt-4 w-2/3 border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Repository</Button>
@@ -150,7 +150,7 @@ const Projects = () => {
 
             </div>
             <Link to="/projects/shooter">
-              <Button className="mt-4 w-2/3 border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Project</Button>
+              <Button className="mt-4 w-2/3 border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View More</Button>
             </Link>
             <Link to="https://github.com/Desgue/wave-shooter" target="_blank" rel="noopener noreferrer">
               <Button className="mt-4 w-2/3 border-[#6E07F3]  text-[#6E07F3] font-medium  hover:bg-[#6E07F3] hover:text-white" variant="outline">View Repository</Button>

@@ -72,7 +72,7 @@ const Expect = () => (
     <p>
       The process of learning and creating are a very rewarding experience and I am not afraid of tackling new challenges.
     </p>
-    <p>I'm lways pushing myself to the limit and when I commit to something I give my 100%.  </p>
+    <p>I'm always pushing myself to the limit and when I commit to something I give my 100%.  </p>
 
 
   </div>
