@@ -9,9 +9,28 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 const Nav = () => {
+  const [show, setShow] = React.useState(true)
+  const [lastScrollPos, setlastScrollPos] = React.useState(0)
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollPos ) {
+      setShow(false)
+    }
+    else {
+      setShow(true)
+    }
+    setlastScrollPos(window.scrollY)
+  }
+  React.useEffect(() => {
+    window.addEventListener('scroll', controlNavbar)
+    return () => {
+      window.removeEventListener('scroll', controlNavbar)
+    }
+    
+  }, [lastScrollPos])
+
   return (
     
-    <header className='container mx-auto sticky top-0 z-40 pt-2 '>
+    <header className={` ${show ? "":"hidden"} container fixed mx-auto  top-0 z-40 pt-2 `}>
       <LargeNav/>
       <SmallNav/>
     </header>
@@ -21,8 +40,10 @@ const Nav = () => {
 export default Nav
 
 const LargeNav = () => {
+
+
   return (
-    <nav className='hidden lg:flex gap-12 justify-center h-16 w-1/3  mx-auto items-center border-neutral-200 border rounded-full shadow-sm bg-white'>
+    <nav className={`hidden lg:flex gap-12 justify-center h-16 w-1/3  left-1/2 absolute  items-center border-neutral-200 border rounded-full shadow-sm bg-white`}>
     <NavLink
       to="/home"
       className={({ isActive, isPending }) =>

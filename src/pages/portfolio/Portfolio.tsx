@@ -1,3 +1,4 @@
+import React from "react"
 import Nav from "@/components/nav"
 import tasker from '../../assets/projects_resized.png'
 import shooter from '../../assets/wave-shooter_resized.png'
@@ -18,6 +19,10 @@ import { FaGolang } from "react-icons/fa6";
 
 
 const Portfolio = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }
+  , [])
   return (
     <main className="bg-neutral-50">
     <Nav />

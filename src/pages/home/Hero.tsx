@@ -27,17 +27,20 @@ const Hero = () => {
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 pt-10">
               <button className="p-[3px] relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-                    <Link to="/portfolio">
+                    <button onClick={() => {
+                      const element = document.getElementById("projects")
+                      element?.scrollIntoView({behavior: "smooth"})
+                    }}>
                     <div className="px-8 py-2  bg-white rounded-[6px]  relative group transition duration-200 text-[#6E07F3]  font-semibold text-sm lg:text-xl hover:text-white hover:bg-transparent">
                       Check my work
                     </div>
-                    </Link>
+                    </button>
               </button>
             </div>
           </div>
         </section>
         <section className="container mx-auto flex flex-row justify-between gap-0.5 sm:mt-12 m-0">
-          <Link to="https://github.com/desgue">
+          <Link to="https://github.com/desgue" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-12 w-12 lg:h-14 lg:w-14"
@@ -48,7 +51,7 @@ const Hero = () => {
             </svg>
           </Link>
 
-          <Link to="https://www.linkedin.com/in/eduardo-gomero-96179215b/">
+          <Link to="https://www.linkedin.com/in/eduardo-gomero-96179215b/" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-12 w-12 lg:h-14 lg:w-14 text-[#0077b5]"
@@ -58,7 +61,7 @@ const Hero = () => {
                 d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
             </svg>
           </Link>
-          <Link to="mailto:guedesgomero@gmail.com">
+          <Link to="mailto:guedesgomero@gmail.com" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-12 w-12   lg:h-16 lg:w-16 text-[#ea4335]"
