@@ -46,7 +46,6 @@ type ButtonsProps = {
 
 type ProjectCardProps = {
   image: string
-  key: string
   title: string
   subtitle: string
   description: string
@@ -60,7 +59,7 @@ type ProjectCardProps = {
 
 
 
-const ProjectCard = ({image, key, title, subtitle, description, descriptionComponent, buttons, icons}: ProjectCardProps) => {
+const ProjectCard = ({image, title, subtitle, description, descriptionComponent, buttons, icons}: ProjectCardProps) => {
   return (
     <div className="flex h-[100%] flex-col inset-0 bg-white rounded-xl">
       <img loading="lazy" className=" p-4 mx-auto w-fit h-[300px] object-cover rounded-md" src={image}/>
@@ -93,7 +92,6 @@ const Btn = ({children}: BtnProps) => {
 const Items: ProjectCardProps[] = [
   {
     image: tasker,
-    key: "tasker",
     title: "Tasker",
     subtitle: "Project Management App",
     description: `Auth handled by Amazon Cognito, front end in React, Tailwind, ShadcnUI and backend in Go and Postgress. 
@@ -170,7 +168,6 @@ const Items: ProjectCardProps[] = [
   },
   {
     image: shooter,
-    key: "wave-shooter",
     title: "Wave Shooter",
     subtitle: "Wave Shooter Game in Python",
     description: "A simple game being developed in Python to learn more about game development. The game is a simple wave shooter where the player has to survive waves of enemies.",
@@ -190,7 +187,6 @@ const Items: ProjectCardProps[] = [
   },
   {
     image: pong,
-    key: "pong",
     title: "Pong",
     subtitle: "Remake of Pong in Python",
     description: "My first game developed in Python to learn the basic of game development. The game is a simple pong game where the player has to hit the ball with the paddle.",
@@ -210,7 +206,6 @@ const Items: ProjectCardProps[] = [
   },
   {
     image: portfolio,
-    key: "portfolio",
     title: "Portfolio",
     subtitle: "My personal portfolio",
     description: "My personal portfolio developed to showcase my work and pratice frontend web development. The portfolio is developed in React, Tailwind and ShadcnUI. Hosted on Aws Amplify.",
