@@ -39,6 +39,10 @@ const Portfolio = () => {
 }
 
 export default Portfolio
+type ButtonsProps = {
+  text: string
+  link: string
+}
 
 type ProjectCardProps = {
   image: string
@@ -46,7 +50,8 @@ type ProjectCardProps = {
   title: string
   subtitle: string
   description: string
-  links: string[]
+  descriptionComponent?: ReactNode
+  buttons:  ButtonsProps[]
   icons?: ReactNode
   className?: string
 
@@ -55,49 +60,26 @@ type ProjectCardProps = {
 
 
 
-const ProjectCard = ({image, key, title, subtitle, description, links, icons}: ProjectCardProps) => {
+const ProjectCard = ({image, key, title, subtitle, description, descriptionComponent, buttons, icons}: ProjectCardProps) => {
   return (
     <div className="flex h-[100%] flex-col inset-0 bg-white rounded-xl">
       <img loading="lazy" className=" p-4 mx-auto w-fit h-[300px] object-cover rounded-md" src={image}/>
       <h1 className="text-3xl font-semibold p-2">{title}</h1>
       <p className="text-lg font-medium p-2">{subtitle}</p>
       <p className="text-base font-normal p-2">{description}</p>
+        {descriptionComponent ?  descriptionComponent : <p className="lg:h-24"></p>} 
       <div className="flex gap-2 mx-auto">
         {icons}
       </div>
-      <div className="flex flex-col md:flex-row md:gap-4 p-2">
-      <Link target="_blank" to={`/projects/${key}`}> 
-        <Btn>
-            Project Details
-        </Btn>
-      </Link>
-      {links.length > 1 
-      ? (
-        <>
-            <Link target="_blank" to={links[1]}> 
-              <Btn>
-                 View Live Demo
-              </Btn>
-            </Link>
-           <Link target="_blank" to={links[0]}> 
-              <Btn>
-                 View Repository
-              </Btn>
-            </Link>
-        </>
-      )
-
-      : <Link target="_blank" to={links[0]}> 
-          <Btn>
-            View Repository
-          </Btn>
-        </Link>
-        }
+      <div className="flex flex-co md:flex-row justify-around gap-2 md:gap-4 p-2">
+        {buttons?.map((button: ButtonsProps) => (
+          <Link to={button.link} target="_blank">
+            <Btn>{button.text}</Btn>
+          </Link>
+        ))}
       </div>
-
     </div>
-  )
-}
+  )}
 
 type BtnProps = {children: ReactNode}
 const Btn = ({children}: BtnProps) => {
@@ -108,14 +90,21 @@ const Btn = ({children}: BtnProps) => {
   )
 }
 
-const Items = [
+const Items: ProjectCardProps[] = [
   {
     image: tasker,
     key: "tasker",
     title: "Tasker",
     subtitle: "Project Management App",
-    description: "Auth handled by Amazon Cognito, front end in React, Tailwind, ShadcnUI and backend in Go and Postgress. Frontend deployed in Aws Amplify and backend in Railway.",
-    links: ["https://github.com/Desgue/Tasker", "https://production.d3ozduy4s4mqlc.amplifyapp.com/"],
+    description: `Auth handled by Amazon Cognito, front end in React, Tailwind, ShadcnUI and backend in Go and Postgress. 
+    Frontend deployed in Aws Amplify and backend in Railway. You can test the app using the following credentials:`,
+    descriptionComponent: (
+    <div className="flex flex-col gap-2 font-semibold p-2 ">
+      <p >Username: visitor Password: Visitor123 </p>
+      <p>Password: Visitor123</p>
+    </div>
+  ),
+    buttons : [{text: "Project Details", link: "/tasker"}, {text: "View Repository", link:"https://github.com/Desgue/Tasker"}, {text: "Live Demo", link: "https://production.d3ozduy4s4mqlc.amplifyapp.com/"}],
     icons: (
       <>
       <TooltipProvider>
@@ -185,7 +174,7 @@ const Items = [
     title: "Wave Shooter",
     subtitle: "Wave Shooter Game in Python",
     description: "A simple game being developed in Python to learn more about game development. The game is a simple wave shooter where the player has to survive waves of enemies.",
-    links: ["https://github.com/Desgue/wave-shooter"],
+    buttons: [{text: "Project Details", link: "/wave-shooter"}, {text: "View Repository", link:"https://github.com/Desgue/wave-shooter"}],
     icons: (<TooltipProvider>
       <Tooltip>
         <TooltipTrigger className='hover:cursor-default '>
@@ -205,7 +194,7 @@ const Items = [
     title: "Pong",
     subtitle: "Remake of Pong in Python",
     description: "My first game developed in Python to learn the basic of game development. The game is a simple pong game where the player has to hit the ball with the paddle.",
-    links: ["https://github.com/Desgue/Pong2"],
+    buttons : [{text: "Project Details", link: "/pong"}, {text: "View Repository", link:"https://github.com/Desgue/Pong2"}],
     icons: (<TooltipProvider>
       <Tooltip>
         <TooltipTrigger className='hover:cursor-default '>
@@ -225,7 +214,7 @@ const Items = [
     title: "Portfolio",
     subtitle: "My personal portfolio",
     description: "My personal portfolio developed to showcase my work and pratice frontend web development. The portfolio is developed in React, Tailwind and ShadcnUI. Hosted on Aws Amplify.",
-    links: ["https://github.com/Desgue/portfolio"],
+    buttons: [{text: "Project Details", link: "/portfolio"}, {text: "View Repository", link:"https://github.com/Desgue/portfolio"}],
     icons: (<>
         <TooltipProvider>
       <Tooltip>
