@@ -41,7 +41,7 @@ const Blog = () => {
   return (
     <main className=" min-h-screen ">
     <Nav />
-    <div className="mt-24">
+    <div className="py-32">
       <div className="container flex flex-col gap-4 ">
         <h1 className="text-5xl font-semibold text-[#6E07F3]"> Blog </h1>
         <h2 className="text-xl font-light "> I find that to learn one must know how to teach, this series is my attempt at teaching what I have been learning during my studies. </h2>

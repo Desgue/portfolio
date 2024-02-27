@@ -26,9 +26,9 @@ const Portfolio = () => {
   return (
     <main className="bg-neutral-50">
     <Nav />
-    <section className="mx-4 md:mx-auto md:container max-w-6xl ">
+    <section className="mx-4 md:mx-auto md:container max-w-6xl py-32">
       <h1 className="text-5xl font-semibold text-[#6E07F3]">Portfolio</h1>
-      <div className="flex flex-col lg:grid grid-cols-2 gap-6 md:gap-12 mt-12">
+      <div className="flex flex-col lg:grid grid-cols-2 gap-6 md:gap-16 mt-12">
         {Items.map((item) => (
           <ProjectCard {...item }/>
         ))}
@@ -61,16 +61,19 @@ type ProjectCardProps = {
 
 const ProjectCard = ({image, title, subtitle, description, descriptionComponent, buttons, icons}: ProjectCardProps) => {
   return (
-    <div className="flex h-[100%] flex-col inset-0 bg-white rounded-xl">
+    <div className="flex flex-col inset-0 bg-white rounded-xl">
       <img loading="lazy" className=" p-4 mx-auto w-fit h-[300px] object-cover rounded-md" src={image}/>
+      <div className="p-2 gap-4 flex flex-col">
       <h1 className="text-3xl font-semibold p-2">{title}</h1>
       <p className="text-lg font-medium p-2">{subtitle}</p>
       <p className="text-base font-normal p-2">{description}</p>
+        
         {descriptionComponent ?  descriptionComponent : <p className="lg:h-24"></p>} 
       <div className="flex gap-2 mx-auto">
         {icons}
       </div>
-      <div className="flex flex-co md:flex-row justify-around gap-2 md:gap-4 p-2">
+      </div>
+      <div className="flex flex-co md:flex-row justify-evenly gap-2 md:gap-4 pb-4">
         {buttons?.map((button: ButtonsProps) => (
           <Link to={button.link} target="_blank">
             <Btn>{button.text}</Btn>
