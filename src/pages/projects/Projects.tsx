@@ -22,7 +22,7 @@ const Projects = () => {
     <main className="bg-neutral-50">
     <Nav />
     <section className="mx-4 md:mx-auto md:container max-w-6xl mt-12 ">
-      <h1 className="text-5xl font-bold">Projects</h1>
+      <h1 className="text-5xl font-medium">Projects</h1>
       <div className="flex flex-col lg:grid grid-cols-2 gap-6 md:gap-12 mt-12">
         {Items.map((item) => (
           <ProjectCard {...item }/>
@@ -54,7 +54,7 @@ const ProjectCard = ({image, key, title, subtitle, description, links, icons}: P
   return (
     <div className="flex h-[100%] flex-col inset-0 bg-white rounded-xl">
       <img loading="lazy" className=" p-4 mx-auto w-fit h-[300px] object-cover rounded-md" src={image}/>
-      <h1 className="text-4xl font-bold p-2">{title}</h1>
+      <h1 className="text-3xl font-semibold p-2">{title}</h1>
       <p className="text-lg font-medium p-2">{subtitle}</p>
       <p className="text-base font-normal p-2">{description}</p>
       <div className="flex gap-2 mx-auto">
