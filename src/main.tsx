@@ -8,13 +8,13 @@ import "./index.css";
 import { Navigate } from 'react-router-dom';
 import App from './App.tsx';
 import Blog from "./pages/blog/Blog";
-import Projects from './pages/projects/Projects.tsx';
+import Portfolio from './pages/portfolio/Portfolio.tsx';
 
 
 const router = createBrowserRouter([
   { path: "/home", element: <App /> },
   { path: "/blog", element: <Blog />},
-  { path: "/projects", element: <Projects/> },
+  { path: "/portfolio", element: <Portfolio/> },
   { path: "*", element: <Navigate to="/home" /> },
 ]);
 

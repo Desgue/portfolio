@@ -27,7 +27,7 @@ const Hero = () => {
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 pt-10">
               <button className="p-[3px] relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-                    <Link to="/projects">
+                    <Link to="/portfolio">
                     <div className="px-8 py-2  bg-white rounded-[6px]  relative group transition duration-200 text-[#6E07F3]  font-semibold text-sm lg:text-xl hover:text-white hover:bg-transparent">
                       Check my work
                     </div>

@@ -15,7 +15,7 @@ import {
 const Projects = () => {
 
   return (
-    <main className="min-h-screen ">
+    <main id="projects" className="min-h-screen ">
       <div className="min-h-[480px] flex flex-col items-center text-center mx-auto pt-24 bg-[#6E07F3]">
         <h1 className="text-4xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-200 pt-4">My Personal Projects</h1>
         <h2 className="text-md lg:text-xl font-semibold pt-4 px-2 text-white">Some of the pet projects I am currently working on.</h2>

@@ -26,7 +26,6 @@ const Blog = () => {
     document.title = "Blog";
     getAllPosts({host: "guedes.hashnode.dev/", first: 10})
     .then((res) => {
-      console.log(res)
       const node = res.edges[0].node
       setResponse((prev) => {
         return {...prev, brief: node.brief, publishedAt: node.publishedAt, readTimeInMinutes: node.readTimeInMinutes, slug: node.slug, url: node.url, title: node.title, coverImage:{url: node.coverImage.url}}
@@ -44,7 +43,7 @@ const Blog = () => {
     <Nav />
     <div className="mt-24">
       <div className="container flex flex-col gap-4 ">
-        <h1 className="text-5xl "> Blog </h1>
+        <h1 className="text-5xl font-semibold text-[#6E07F3]"> Blog </h1>
         <h2 className="text-xl font-light "> I find that to learn one must know how to teach, this series is my attempt at teaching what I have been learning during my studies. </h2>
       </div>
       {loading ? <div className="container mx-auto"> <p className="text-xl font-semibold text-center">Loading...</p> </div> : 
@@ -68,7 +67,7 @@ const PostCard = ({brief, publishedAt, readTimeInMinutes, url, title, coverImage
         <div className="flex gap-2 text-[#64748b] my-1">
           <p className="text-sm font-normal flex gap-2 text-[#6E07F3]"><FaRegCalendarTimes className="pl-1 mt-1" />  {new Date(publishedAt).toLocaleDateString()}</p>
           <p className="text-sm font-normal flex gap-1 text-[#6E07F3]"> <IoMdBook className=" w-4 h-4 pt-1"/> {readTimeInMinutes} min read</p>
-          <p className="text-sm font-normal pl-2 text-[#6E07F3]">  Click to read on Hash Node</p>
+          <p className="text-sm font-normal pl-2 text-[#6E07F3]">  Read on Hash Node</p>
         </div>
         <div className=" text-md  md:text-lg">
           <p className="indent-1 lg:text-clip"> {brief} </p>

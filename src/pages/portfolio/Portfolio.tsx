@@ -17,12 +17,12 @@ import { IconContext } from "react-icons";
 import { FaGolang } from "react-icons/fa6";
 
 
-const Projects = () => {
+const Portfolio = () => {
   return (
     <main className="bg-neutral-50">
     <Nav />
     <section className="mx-4 md:mx-auto md:container max-w-6xl mt-12 ">
-      <h1 className="text-5xl font-medium">Projects</h1>
+      <h1 className="text-5xl font-semibold text-[#6E07F3]">Portfolio</h1>
       <div className="flex flex-col lg:grid grid-cols-2 gap-6 md:gap-12 mt-12">
         {Items.map((item) => (
           <ProjectCard {...item }/>
@@ -33,7 +33,7 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default Portfolio
 
 type ProjectCardProps = {
   image: string

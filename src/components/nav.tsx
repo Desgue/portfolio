@@ -36,13 +36,13 @@ const LargeNav = () => {
     </NavLink>  
 
 
-    <NavLink to="/projects" className={({ isActive, isPending }) =>
+    <NavLink to="/portfolio" className={({ isActive, isPending }) =>
         [
           isActive ? "!text-[#6E07F3] " : "",
           isPending ? "text-black " : "",
         ].join(" text-base font-semibold  hover:text-[#6E07F3] flex gap-2 items-center ", )
       }>
-      <FaProjectDiagram /> Projects
+      <FaProjectDiagram /> Portfolio
     </NavLink> 
 
     <NavLink to="/blog" className={({ isActive, isPending }) =>
@@ -83,13 +83,13 @@ const SmallNav = () => {
           </DropdownMenuItem>
           
           <DropdownMenuItem>
-            <NavLink to="/projects" className={({ isActive, isPending }) =>
+            <NavLink to="/portfolio" className={({ isActive, isPending }) =>
                 [
                   isActive ? "!text-[#6E07F3] " : "",
                   isPending ? "text-black " : "",
                 ].join(" text-base font-semibold  hover:text-[#6E07F3] flex gap-2 items-center ", )
               }>
-              <FaProjectDiagram /> Projects
+              <FaProjectDiagram /> Portfolio
             </NavLink> 
           </DropdownMenuItem>
 
