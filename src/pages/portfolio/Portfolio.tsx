@@ -26,7 +26,7 @@ const Portfolio = () => {
   return (
     <main className="bg-neutral-50">
     <Nav />
-    <section className="mx-4 md:mx-auto md:container max-w-6xl mt-12 ">
+    <section className="mx-4 md:mx-auto md:container max-w-6xl ">
       <h1 className="text-5xl font-semibold text-[#6E07F3]">Portfolio</h1>
       <div className="flex flex-col lg:grid grid-cols-2 gap-6 md:gap-12 mt-12">
         {Items.map((item) => (
