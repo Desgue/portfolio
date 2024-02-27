@@ -47,7 +47,7 @@ const Blog = () => {
         <h1 className="text-5xl"> Blog </h1>
         <h2 className="text-xl font-light"> I find that to learn one must know how to teach, this series is my attempt at teaching what I have been learning during my studies. </h2>
       </div>
-      {loading ? <p>Loading...</p> : 
+      {loading ? <div className="container mx-auto"> <p className="text-xl font-semibold text-center">Loading...</p> </div> : 
         <div className="flex flex-col mt-12  gap-12 items-center">
           <PostCard {...response} />
         </div>
