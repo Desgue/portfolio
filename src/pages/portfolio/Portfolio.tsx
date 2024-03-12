@@ -16,7 +16,7 @@ import {
   PostgressToolTip,
   PythonPygameTooltip,
   AwsCognitoAmplifyToolTip,
-} from "./tooltips";
+} from "../../components/CustomTooltips";
 
 const Portfolio = () => {
   React.useEffect(() => {
@@ -140,10 +140,9 @@ const Items: ProjectCardProps[] = [
     image: taskercli,
     title: "Tasker CLI",
     subtitle: "A companion to the Tasker web app",
-    description: `A CLI Terminal User Interface for based on the Tasker web app project. View projects and tasks in a kanban board in your terminal. 
+    description: `A CLI Terminal User Interface based on the Tasker web app project. View projects and tasks in a kanban board in your terminal. 
     Developed in Golang with the BubbleTea library and Sqlite for persistance. `,
     buttons: [
-      {text: "Project Details", link:"/tasker-cli"},
       {text: "View Repository", link:"https://github.com/Desgue/Tasker-CLI"},
     ],
     icons: <GoToolTip />
@@ -157,7 +156,7 @@ const Items: ProjectCardProps[] = [
     description:
       "A simple game being developed in Python to learn more about game development. The game is a simple wave shooter where the player has to survive waves of enemies.",
     buttons: [
-      { text: "Project Details", link: "/wave-shooter" },
+  
       {
         text: "View Repository",
         link: "https://github.com/Desgue/wave-shooter",
@@ -172,7 +171,7 @@ const Items: ProjectCardProps[] = [
     description:
       "My first game developed in Python to learn the basic of game development. The game is a simple pong game where the player has to hit the ball with the paddle.",
     buttons: [
-      { text: "Project Details", link: "/pong" },
+
       { text: "View Repository", link: "https://github.com/Desgue/Pong2" },
     ],
     icons: <PythonPygameTooltip />,
@@ -184,7 +183,6 @@ const Items: ProjectCardProps[] = [
     description:
       "My personal portfolio developed to showcase my work and pratice frontend web development. The portfolio is developed in React, Tailwind and ShadcnUI. Hosted on Aws Amplify.",
     buttons: [
-      { text: "Project Details", link: "/portfolio" },
       { text: "View Repository", link: "https://github.com/Desgue/portfolio" },
     ],
     icons: (
